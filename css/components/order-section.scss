@@ -1,0 +1,12 @@
+.order-section{
+    background: url("../img/decor/blueberries.png") left bottom 40px no-repeat,
+    url("../img/decor/leaf_delivery.png") right bottom 40px no-repeat,
+    url("../img/bg/bg_delivery.png");
+    height: 100vh;
+    min-height: 650px;
+}
+
+.order-title{
+    color: $darkGreen;
+    margin-bottom: 54px;
+}

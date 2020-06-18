@@ -1,0 +1,30 @@
+$containerWidth: 940px;
+$baseFontSize: 18px;
+
+//colors
+$blue: #86c3d7;
+$darkGreen: #365a49;
+
+//z-indexes
+
+$z-fixed-menu: 100;
+
+//setups
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700;800&family=Open+Sans&display=swap');
+@import "layout"; 
+@import "components/hero";
+@import "components/header";
+@import "components/features";
+@import "components/feature";
+@import "components/btn";
+@import "components/section";
+@import "components/preference";
+@import "components/benefit";
+@import "components/benefits";
+@import "components/benefits-section";
+@import "components/reviews";
+@import "components/interactive-avatar";
+@import "components/order-section";
+@import "components/form";
+@import "components/radio";
+@import "components/fixed-menu";

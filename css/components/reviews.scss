@@ -1,0 +1,95 @@
+.reviews__section{
+    position: relative;
+
+    &:before{
+        content: url("../img/decor/berries_leafs2.png");
+        position: absolute;
+        bottom:-243px;
+        left:0;
+    }
+
+    &:after{
+        content: url("../img/decor/strawberry.png");
+        position:absolute;
+        top: 72px;
+        right: 137px;
+    }
+}
+
+.reviews{
+    position: relative;
+
+    &:after{
+        content: url("../img/decor/bg_pattern.png");
+        position: absolute;
+        top:0;
+        right:0;
+    }
+}
+
+.reviews__display{
+    background: #f8faf9;
+    padding: 50px 45px 34px;
+
+    &:before{
+        content:"";
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        display: block;
+        background: #fff;
+        position: absolute;
+        top:-65px;//??
+        left: 50%;
+        transform: translateX(-50%);//??
+    }
+}
+
+.reviews__display-inner{
+    display: flex;
+}
+
+.reviews__avatar{
+    width: 245px;
+    height: 260px;
+}
+
+.reviews__avatar-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;// что значит?
+}
+
+.reviews__content{
+    flex: 1;
+    margin-left: 20px;
+    padding-right: 140px;
+}
+
+.reviews__title{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 22px;
+    color:black;
+}
+
+.reviews__author{
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    margin-top: 32px;
+}
+
+.reviews__switcher{
+    display: flex;
+    justify-content: center;
+    margin-top: 27px;
+}
+
+.reviews__switcher-item{
+    margin-right: 11px;
+}
+
+.reviews__text{
+    line-height:1.2;
+}
