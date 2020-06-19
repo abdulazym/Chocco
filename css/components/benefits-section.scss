@@ -5,7 +5,7 @@
     &:before{
         position: absolute;
         left:0;
-        bottom:-120px;
+        bottom:rem(-120px);
         content: url("../img/decor/raspberry.png");
     }
 }

@@ -2,21 +2,21 @@
     background: url("../img/bg/big_leaf.png") right bottom no-repeat;
     background-color: $blue; 
     height: 100vh;
-    min-height: 650px;
+    min-height: rem(650px);
     color:#fff;
     position: relative;
 
 
     &:before{
         position: absolute;
-        bottom:-40px;
+        bottom:rem(-40px);
         left: 2%;
         content: url("../img/decor/leaf3.png");
     }
 
     &:after{
         position: absolute;
-        bottom:-40px;
+        bottom:rem(-40px);
         right:0;
         content: url("../img/decor/berries_leafs.png");
     }
@@ -27,8 +27,8 @@
     flex-direction: column;
     justify-content: space-between;
     height: 100%;//почему это свойство нужно
-    padding-top: 24px;
-    padding-bottom:51px;
+    padding-top: rem(24px);
+    padding-bottom:rem(51px);
     background:  url("../img/decor/chocolate.png") right center/50% auto no-repeat,;
 }
 
@@ -37,18 +37,18 @@
 }
 
 .hero__main-title{
-    font-size: 48px;
+    font-size: rem(48px);
     font-weight: 700;
     text-transform: uppercase;
     line-height: 1.2;
-    margin-bottom: 23px;
+    margin-bottom: rem(23px);
 }
 
 .hero__title-desc{
     font-family: "Alegreya Sans";
-    font-size: 21px;
+    font-size: rem(21px);
     font-weight: 400;
-    margin-bottom: 56px;
+    margin-bottom: rem(56px);
     padding-right: 10%;//?
     line-height: 1.2;
 }

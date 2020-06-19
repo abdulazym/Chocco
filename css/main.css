@@ -1,11 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700;800&family=Open+Sans&display=swap");
+html {
+  font-size: 18px;
+}
+
 html,
 body {
   height: 100%;
 }
 
 body {
-  font-size: 18px;
   font-family: "Alegreya Sans", Arial, Helvetica, sans-serif;
   line-height: 1.42;
   -webkit-font-smoothing: antialiased;
@@ -17,13 +20,13 @@ body {
 .wrapper {
   position: relative;
   width: 100%;
-  min-width: 960px;
   min-height: 100%;
   overflow: hidden;
 }
 
 .container {
-  width: 940px;
+  width: 95%;
+  max-width: 940px;
   margin: 0 auto;
 }
 
@@ -77,19 +80,19 @@ img {
   background: url("../img/bg/big_leaf.png") right bottom no-repeat;
   background-color: #86c3d7;
   height: 100vh;
-  min-height: 650px;
+  min-height: 36.1111111111rem;
   color: #fff;
   position: relative;
 }
 .hero:before {
   position: absolute;
-  bottom: -40px;
+  bottom: -2.2222222222rem;
   left: 2%;
   content: url("../img/decor/leaf3.png");
 }
 .hero:after {
   position: absolute;
-  bottom: -40px;
+  bottom: -2.2222222222rem;
   right: 0;
   content: url("../img/decor/berries_leafs.png");
 }
@@ -99,8 +102,8 @@ img {
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  padding-top: 24px;
-  padding-bottom: 51px;
+  padding-top: 1.3333333333rem;
+  padding-bottom: 2.8333333333rem;
   background: url("../img/decor/chocolate.png") right center/50% auto no-repeat;
 }
 
@@ -109,18 +112,18 @@ img {
 }
 
 .hero__main-title {
-  font-size: 48px;
+  font-size: 2.6666666667rem;
   font-weight: 700;
   text-transform: uppercase;
   line-height: 1.2;
-  margin-bottom: 23px;
+  margin-bottom: 1.2777777778rem;
 }
 
 .hero__title-desc {
   font-family: "Alegreya Sans";
-  font-size: 21px;
+  font-size: 1.1666666667rem;
   font-weight: 400;
-  margin-bottom: 56px;
+  margin-bottom: 3.1111111111rem;
   padding-right: 10%;
   line-height: 1.2;
 }
@@ -141,7 +144,7 @@ img {
 }
 
 .menu__item {
-  margin-right: 28px;
+  margin-right: 1.5555555556rem;
 }
 .menu__item:last-child {
   margin-right: 0;
@@ -154,14 +157,14 @@ img {
 .phone-number {
   display: flex;
   align-items: center;
-  font-size: 24px;
+  font-size: 1.3333333333rem;
   text-decoration: none;
 }
 
 .phone-number__icon-elem {
-  width: 12px;
-  height: 11px;
-  margin-right: 6px;
+  width: 0.6666666667rem;
+  height: 0.6111111111rem;
+  margin-right: 0.3333333333rem;
 }
 
 .features {
@@ -169,11 +172,11 @@ img {
 }
 
 .features__item {
-  margin-right: 46px;
+  margin-right: 2.5555555556rem;
 }
 .features__item:last-child {
   margin-right: 0;
-  margin-left: -15px;
+  margin-left: -0.8333333333rem;
 }
 
 .feature {
@@ -181,21 +184,21 @@ img {
 }
 
 .feature__icon {
-  width: 45px;
-  margin-right: 7px;
+  width: 2.5rem;
+  margin-right: 0.3888888889rem;
 }
 
 .feature__text {
-  font-size: 16px;
-  max-width: 85px;
+  font-size: 0.8888888889rem;
+  max-width: 4.7222222222rem;
 }
 
 .btn {
-  padding: 24px 34px 22px 35px;
-  font-size: 19px;
+  padding: 1.3333333333rem 1.8888888889rem 1.2222222222rem 1.9444444444rem;
+  font-size: 1.0555555556rem;
   font-weight: bold;
   text-transform: uppercase;
-  border-radius: 100px;
+  border-radius: 5.5555555556rem;
   text-decoration: none;
   line-height: 1;
   border: none;
@@ -229,7 +232,7 @@ img {
 
 .section {
   height: 100vh;
-  min-height: 650px;
+  min-height: 36.1111111111rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -239,9 +242,9 @@ img {
 }
 
 .section__title {
-  font-size: 48px;
+  font-size: 2.6666666667rem;
   font-weight: bold;
-  margin-bottom: 60px;
+  margin-bottom: 3.3333333333rem;
   text-align: center;
   text-transform: uppercase;
   color: #000000;
@@ -249,11 +252,11 @@ img {
 
 .preference {
   text-align: center;
-  margin-bottom: 57px;
+  margin-bottom: 3.1666666667rem;
 }
 
 .preference__title {
-  margin-bottom: 25px;
+  margin-bottom: 1.3888888889rem;
 }
 
 .preference__title-desc {
@@ -266,8 +269,8 @@ img {
 
 .benefit__image-wrapper {
   display: inline-block;
-  width: 126px;
-  height: 126px;
+  width: 7rem;
+  height: 7rem;
   position: relative;
   background: #f2f5f4;
   border-radius: 50%;
@@ -275,8 +278,8 @@ img {
 }
 
 .benefit-icon {
-  width: 75px;
-  height: 69px;
+  width: 4.1666666667rem;
+  height: 3.8333333333rem;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -284,14 +287,14 @@ img {
 }
 
 .benefit__image {
-  margin-bottom: 35px;
+  margin-bottom: 1.9444444444rem;
 }
 
 .benefit__title {
   color: #000000;
-  font-size: 27px;
+  font-size: 1.5rem;
   font-weight: 700;
-  margin-bottom: 30px;
+  margin-bottom: 1.6666666667rem;
 }
 
 .benefits {
@@ -306,7 +309,7 @@ img {
 .benefits__item:before {
   content: url("../img/decor/sepator.png");
   position: absolute;
-  top: 30px;
+  top: 1.6666666667rem;
   right: 0;
   transform: translateX(50%);
 }
@@ -327,7 +330,7 @@ img {
 .benefits-section:before {
   position: absolute;
   left: 0;
-  bottom: -120px;
+  bottom: -6.6666666667rem;
   content: url("../img/decor/raspberry.png");
 }
 
@@ -337,14 +340,14 @@ img {
 .reviews__section:before {
   content: url("../img/decor/berries_leafs2.png");
   position: absolute;
-  bottom: -243px;
+  bottom: -13.5rem;
   left: 0;
 }
 .reviews__section:after {
   content: url("../img/decor/strawberry.png");
   position: absolute;
-  top: 72px;
-  right: 137px;
+  top: 4rem;
+  right: 7.6111111111rem;
 }
 
 .reviews {
@@ -359,17 +362,17 @@ img {
 
 .reviews__display {
   background: #f8faf9;
-  padding: 50px 45px 34px;
+  padding: 2.7777777778rem 2.5rem 1.8888888889rem;
 }
 .reviews__display:before {
   content: "";
-  width: 90px;
-  height: 90px;
+  width: 5rem;
+  height: 5rem;
   border-radius: 50%;
   display: block;
   background: #fff;
   position: absolute;
-  top: -65px;
+  top: -3.6111111111rem;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -379,8 +382,8 @@ img {
 }
 
 .reviews__avatar {
-  width: 245px;
-  height: 260px;
+  width: 13.6111111111rem;
+  height: 14.4444444444rem;
 }
 
 .reviews__avatar-img {
@@ -391,32 +394,32 @@ img {
 
 .reviews__content {
   flex: 1;
-  margin-left: 20px;
-  padding-right: 140px;
+  margin-left: 1.1111111111rem;
+  padding-right: 7.7777777778rem;
 }
 
 .reviews__title {
-  font-size: 30px;
+  font-size: 1.6666666667rem;
   font-weight: bold;
-  margin-bottom: 22px;
+  margin-bottom: 1.2222222222rem;
   color: black;
 }
 
 .reviews__author {
-  font-size: 18px;
+  font-size: 1rem;
   font-weight: bold;
   color: black;
-  margin-top: 32px;
+  margin-top: 1.7777777778rem;
 }
 
 .reviews__switcher {
   display: flex;
   justify-content: center;
-  margin-top: 27px;
+  margin-top: 1.5rem;
 }
 
 .reviews__switcher-item {
-  margin-right: 11px;
+  margin-right: 0.6111111111rem;
 }
 
 .reviews__text {
@@ -424,16 +427,16 @@ img {
 }
 
 .interactive-avatar {
-  width: 80px;
-  height: 80px;
+  width: 4.4444444444rem;
+  height: 4.4444444444rem;
   border-radius: 50%;
   overflow: hidden;
   position: relative;
-  border: 6px solid transparent;
+  border: 0.3333333333rem solid transparent;
 }
 
 .interactive-avatar--active {
-  border: 6px solid #0f5a47;
+  border: 0.3333333333rem solid #0f5a47;
 }
 
 .interactive-avatar__link {
@@ -453,14 +456,14 @@ img {
 }
 
 .order-section {
-  background: url("../img/decor/blueberries.png") left bottom 40px no-repeat, url("../img/decor/leaf_delivery.png") right bottom 40px no-repeat, url("../img/bg/bg_delivery.png");
+  background: url("../img/decor/blueberries.png") left bottom 2.2222222222rem no-repeat, url("../img/decor/leaf_delivery.png") right bottom 2.2222222222rem no-repeat, url("../img/bg/bg_delivery.png");
   height: 100vh;
-  min-height: 650px;
+  min-height: 36.1111111111rem;
 }
 
 .order-title {
   color: #365a49;
-  margin-bottom: 54px;
+  margin-bottom: 3rem;
 }
 
 .form {
@@ -469,7 +472,7 @@ img {
 
 .form__col {
   flex: 1;
-  margin-right: 20px;
+  margin-right: 1.1111111111rem;
 }
 .form__col:last-child {
   margin-right: 0;
@@ -477,25 +480,25 @@ img {
 
 .form__row {
   display: flex;
-  margin-bottom: 18px;
+  margin-bottom: 1rem;
 }
 
 .form__block {
   flex: 1;
-  margin-right: 20px;
+  margin-right: 1.1111111111rem;
 }
 .form__block:last-child {
-  margin-right: 0px;
+  margin-right: 0rem;
 }
 
 .form__input {
   width: 100%;
   border: none;
-  padding: 18px 11px;
-  border: solid 3px transparent;
+  padding: 1rem 0.6111111111rem;
+  border: solid 0.1666666667rem transparent;
 }
 .form__input--textarea {
-  height: 180px;
+  height: 10rem;
   resize: none;
 }
 .form__input:focus {
@@ -506,14 +509,14 @@ img {
 .form__controls {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 13px;
+  margin-bottom: 0.7222222222rem;
 }
 .form__controls:last-child {
   margin-bottom: 0;
 }
 
 .form__btns {
-  margin-top: 42px;
+  margin-top: 2.3333333333rem;
 }
 
 .radio {
@@ -521,7 +524,7 @@ img {
   cursor: pointer;
   -webkit-user-select: none;
           user-select: none;
-  margin-right: 23px;
+  margin-right: 1.2777777778rem;
 }
 .radio:last-child {
   margin-right: 0;
@@ -541,16 +544,16 @@ img {
 }
 
 .radio__visible {
-  width: 26px;
-  height: 26px;
+  width: 1.4444444444rem;
+  height: 1.4444444444rem;
   position: relative;
   border-radius: 50%;
   background: #fff;
 }
 .radio__visible:before {
   content: "";
-  width: 14px;
-  height: 14px;
+  width: 0.7777777778rem;
+  height: 0.7777777778rem;
   background: #365a49;
   border-radius: 50%;
   position: absolute;
@@ -561,7 +564,7 @@ img {
 }
 
 .radio__title {
-  margin-left: 10px;
+  margin-left: 0.5555555556rem;
 }
 
 .fixed-menu {
@@ -572,7 +575,7 @@ img {
 }
 
 .fixed-menu__item {
-  margin-bottom: 5px;
+  margin-bottom: 0.2777777778rem;
 }
 .fixed-menu__item--active .fixed-menu__link {
   border-color: #fff;
@@ -580,16 +583,16 @@ img {
 
 .fixed-menu__link {
   display: block;
-  width: 16px;
-  height: 16px;
+  width: 0.8888888889rem;
+  height: 0.8888888889rem;
   border-radius: 50%;
   position: relative;
-  border: 1px solid transparent;
+  border: 0.0555555556rem solid transparent;
 }
 .fixed-menu__link:before {
   content: "";
-  width: 6px;
-  height: 6px;
+  width: 0.3333333333rem;
+  height: 0.3333333333rem;
   background: #fff;
   border-radius: 50%;
   position: absolute;
