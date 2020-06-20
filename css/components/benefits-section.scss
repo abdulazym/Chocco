@@ -2,6 +2,10 @@
     position:relative;
     background: url("../img/decor/leaf-white.png") no-repeat left top 57%;
 
+    @include tablets {
+        background-position: left top 6%;
+    }
+
     &:before{
         position: absolute;
         left:0;

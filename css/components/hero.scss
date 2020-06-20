@@ -88,6 +88,10 @@
         // padding: 0;
         padding: 0 26%;
     }
+
+    @include phones{
+        padding: 0 22%;
+    }
 }
 
 .hero__icons-section {
