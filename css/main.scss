@@ -9,6 +9,11 @@ $darkGreen: #365a49;
 
 $z-fixed-menu: 100;
 
+//breakpoints
+
+$tablets: 768px;
+$phones: 480px;
+
 //media
 
 @import "media";
@@ -32,3 +37,4 @@ $z-fixed-menu: 100;
 @import "components/form";
 @import "components/radio";
 @import "components/fixed-menu";
+@import "components/hamburger";
