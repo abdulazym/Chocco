@@ -60,8 +60,11 @@
         text-align: center;
 
         &:before{
-            content: url("../img/decor/berry_chocco_tablets.png");
+            content: "";
+            width: rem(316px);
+            height: rem(330px);
             margin-bottom: 16px;
+            background: url("../img/decor/berry_chocco_tablets.png") center center / contain no-repeat;
         }
     }
 }
@@ -90,7 +93,7 @@
     }
 
     @include phones{
-        padding: 0 22%;
+        padding: 0 16%;
     }
 }
 
