@@ -347,9 +347,19 @@ img {
 .preference__title-desc {
   padding: 0 26%;
 }
+@media screen and (max-width: 480px) {
+  .preference__title-desc {
+    padding: 0 10%;
+  }
+}
 
 .benefit {
   text-align: center;
+}
+@media screen and (max-width: 480px) {
+  .benefit {
+    text-align: start;
+  }
 }
 
 .benefit__image-wrapper {
@@ -381,15 +391,42 @@ img {
   font-weight: 700;
   margin-bottom: 1.6666666667rem;
 }
+@media screen and (max-width: 480px) {
+  .benefit__title {
+    margin-bottom: 0.2777777778rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .benefit__text {
+    padding-right: 11%;
+    margin-left: 0.7777777778rem;
+  }
+}
 
 .benefits {
   display: flex;
+}
+@media screen and (max-width: 480px) {
+  .benefits {
+    flex-direction: column;
+  }
 }
 
 .benefits__item {
   flex: 1;
   padding: 0 3%;
   position: relative;
+}
+@media screen and (max-width: 480px) {
+  .benefits__item {
+    display: flex;
+    padding: 0;
+    margin-bottom: 40px;
+  }
+  .benefits__item:before {
+    display: none;
+  }
 }
 .benefits__item:before {
   content: url("../img/decor/sepator.png");
@@ -417,6 +454,14 @@ img {
     background-position: left top 6%;
   }
 }
+@media screen and (max-width: 480px) {
+  .benefits-section {
+    background: none;
+  }
+  .benefits-section:before {
+    display: none;
+  }
+}
 .benefits-section:before {
   position: absolute;
   left: 0;
@@ -439,6 +484,16 @@ img {
   position: absolute;
   top: 4rem;
   right: 7.6111111111rem;
+}
+@media screen and (max-width: 768px) {
+  .reviews__section:before {
+    bottom: -8.6666666667rem;
+    left: -1.5555555556rem;
+  }
+  .reviews__section:after {
+    top: 0;
+    right: -1.6666666667rem;
+  }
 }
 
 .reviews {
@@ -537,6 +592,11 @@ img {
 .reviews__text {
   line-height: 1.2;
 }
+@media screen and (max-width: 480px) {
+  .reviews__text {
+    padding: 0 5%;
+  }
+}
 
 .interactive-avatar {
   width: 4.4444444444rem;
@@ -605,6 +665,11 @@ img {
     padding: 0px 20%;
   }
 }
+@media screen and (max-width: 480px) {
+  .form {
+    padding: 0;
+  }
+}
 
 .form__col {
   flex: 1;
@@ -662,6 +727,11 @@ img {
 }
 .form__controls:last-child {
   margin-bottom: 0;
+}
+@media screen and (max-width: 480px) {
+  .form__controls {
+    justify-content: center;
+  }
 }
 
 .form__btns {

@@ -6,6 +6,15 @@
         background-position: left top 6%;
     }
 
+    @include phones{
+        background: none;
+
+        &:before{
+            display: none;
+        }
+    }
+
+
     &:before{
         position: absolute;
         left:0;

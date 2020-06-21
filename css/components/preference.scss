@@ -9,4 +9,8 @@
 
 .preference__title-desc{
     padding: 0 26%;
+
+    @include phones{
+        padding: 0 10%;
+    }
 }
