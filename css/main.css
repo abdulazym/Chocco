@@ -850,8 +850,14 @@ img {
 }
 
 .map {
-  background: url("../img/bg/map.jpg") center center/100% no-repeat;
-  height: 100%;
+  background: url("../img/bg/map.png") center center/100% 100% no-repeat;
+  height: 87%;
+}
+@media screen and (max-width: 768px) {
+  .map {
+    background: url("../img/bg/map.png") 100% 100% no-repeat;
+    height: 80%;
+  }
 }
 
 .footer {
