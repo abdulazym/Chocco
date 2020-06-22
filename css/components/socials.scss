@@ -1,0 +1,18 @@
+.socials__list{
+    display: flex;
+    align-items: center;
+}
+
+.socials__item{
+    margin-right: rem(20px);
+}
+
+.socials__icon{
+    width:  rem(18px);
+    height: rem(18px);
+    opacity: 0.3;
+
+    &:hover{
+        opacity: 1;
+    }
+}
