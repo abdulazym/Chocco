@@ -3,8 +3,12 @@
     height: 87%;
 
 
-    @include tablets{
+    @include tablets {
         background: url("../img/bg/map.png") 100% 100% no-repeat;
+        height: 63%;
+    }
+
+    @include phones {
         height: 80%;
     }
 }
