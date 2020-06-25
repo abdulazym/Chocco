@@ -31,9 +31,10 @@
 
 .reviews{
     position: relative;
+    // background: url("../img/decor/bg_pattern_phones.png") top right no-repeat;
 
     &:after{
-        content: url("../img/decor/bg_pattern.png");
+        content: url("../img/decor/bg_pattern_phones.png");
         position: absolute;
         top:0;
         right:0;

@@ -9,7 +9,7 @@ html {
 }
 @media screen and (max-width: 480px) {
   html {
-    font-size: 16px;
+    font-size: 3vmin;
   }
 }
 
@@ -105,9 +105,9 @@ img {
   }
 }
 .hero:before {
-  content: url("../img/decor/leaf3.png");
+  content: url("../img/decor/small_leaf.png");
   position: absolute;
-  bottom: -2.2222222222rem;
+  bottom: -3rem;
   left: 2%;
 }
 .hero:after {
@@ -503,7 +503,7 @@ img {
   position: relative;
 }
 .reviews:after {
-  content: url("../img/decor/bg_pattern.png");
+  content: url("../img/decor/bg_pattern_phones.png");
   position: absolute;
   top: 0;
   right: 0;
@@ -855,24 +855,14 @@ img {
 }
 
 .map {
-  background: url("../img/bg/map.png") center center/100% 100% no-repeat;
+  background: url("../img/bg/map.png") center/cover no-repeat;
   height: 87%;
-}
-@media screen and (max-width: 768px) {
-  .map {
-    background: url("../img/bg/map.png") 100% 100% no-repeat;
-    height: 63%;
-  }
-}
-@media screen and (max-width: 480px) {
-  .map {
-    height: 80%;
-  }
 }
 
 .footer {
   height: 100vh;
   min-height: 36.1111111111rem;
+  position: absolute;
 }
 
 .contacts {
@@ -922,4 +912,8 @@ img {
 }
 .socials__icon:hover {
   opacity: 1;
+}
+
+.footer__section {
+  position: relative;
 }
