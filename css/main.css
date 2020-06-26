@@ -860,9 +860,8 @@ img {
 }
 
 .footer {
-  height: 100vh;
-  min-height: 36.1111111111rem;
   position: absolute;
+  top: 87%;
 }
 
 .contacts {
@@ -896,6 +895,10 @@ img {
   }
 }
 
+.socials {
+  display: flex;
+}
+
 .socials__list {
   display: flex;
   align-items: center;
@@ -914,6 +917,7 @@ img {
   opacity: 1;
 }
 
-.footer__section {
+.map__section {
   position: relative;
+  justify-content: flex-start;
 }
