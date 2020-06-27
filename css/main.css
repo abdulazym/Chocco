@@ -856,12 +856,13 @@ img {
 
 .map {
   background: url("../img/bg/map.png") center/cover no-repeat;
-  height: 87%;
+  height: 100%;
 }
 
 .footer {
   position: absolute;
-  top: 87%;
+  bottom: 0;
+  background: #fff;
 }
 
 .contacts {
