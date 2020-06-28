@@ -1,0 +1,82 @@
+.slider{
+    background: url("../img/decor/chockolate_slider.png") left center / 47%  no-repeat;
+    object-fit: cover;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    @include tablets{
+    //   background: url("../img/decor/slider_chocolate-tablets.png") top  / contain no-repeat;
+    //   width: rem(370px);
+    //   height: rem(336px);  
+    background: none; 
+    }
+}
+
+.slider__container{
+    display: flex;
+    max-width: 1000px;
+    align-items: center;
+    height: 100%;
+}
+
+.slider__content{
+    display: flex;
+    flex-direction: column;
+    margin-left: 54%;
+
+    @include tablets{
+        margin-left: 0;
+
+        &::before{
+            content: '';
+            width: rem(370px);
+            height: rem(336px);
+            padding: 0 22%;
+            background: url('../img/decor/slider_chocolate-tablets.png') center center / contain no-repeat;
+        }
+    }
+}
+
+.slider__main-title{
+    font-size: rem(36px);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #000000;
+    margin-bottom: rem(22px);
+
+    @include tablets{
+        padding: 0 17%;
+        font-size: rem(30px);
+    }
+}
+
+.slider__desc-text{
+    font-size: rem(18px);
+    font-weight: 400;
+    color: #666666;
+    padding-right: 21%;
+    margin-bottom: rem(47px);
+
+    @include tablets{
+        padding: 0 11%;
+        text-align: center;
+    }
+}
+
+.slider__desc-info{
+    display: flex;
+    margin-bottom: rem(38px);
+
+    @include tablets {
+        padding: 0 34%;
+    }
+}
+
+.slider__price{
+    display: flex;
+
+    @include tablets{
+        padding: 0 29%;
+    }
+}

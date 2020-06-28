@@ -1,0 +1,21 @@
+.slider-section{
+    background-color: #f8faf9;
+}
+
+.arrow__left{
+    margin-right: rem(9px);
+}
+.arrow__left--icon{
+    width: rem(13px);
+    height: rem(28px);
+    transform: rotate(180deg);
+    fill: #151515;
+    cursor: pointer;
+}
+
+.arrow__right--icon{
+    width: rem(13px);
+    height: rem(28px);
+    fill: #151515;
+    cursor: pointer;
+}

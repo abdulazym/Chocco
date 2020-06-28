@@ -15,4 +15,31 @@
     background: #fff;
     height: 4px;
     border-radius: 10px;
+    transition: .5s;
+}
+
+.hamburger--open{
+    z-index: 2000;
+}
+
+.hamburger--open span {
+    &:nth-child(1){
+        background-color: #ffffff;
+        opacity: 0.7;
+        transform: rotate(45deg);
+        width: 20px;
+        position: absolute;
+        top:32px;
+    }
+    &:nth-child(2){
+        opacity: 0;
+    }
+    &:nth-child(3){
+        background-color: #ffffff;
+        opacity: 0.7;
+        transform: rotate(-45deg);
+        width: 20px;
+        position: absolute;
+        top:32px;
+    }
 }
