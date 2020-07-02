@@ -996,6 +996,33 @@ img {
   cursor: pointer;
 }
 
+@media screen and (max-width: 768px) {
+  .arrow__right {
+    position: relative;
+    bottom: 14%;
+    right: 18%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .arrow__right {
+    right: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .arrow__left {
+    position: relative;
+    bottom: 14%;
+    left: 21%;
+    margin: 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  .arrow__left {
+    left: 0;
+  }
+}
+
 .composition {
   width: 5rem;
   height: 5rem;
@@ -1035,8 +1062,6 @@ img {
 }
 
 .slider {
-  background: url("../img/decor/chockolate_slider.png") left center/47% no-repeat;
-  object-fit: cover;
   height: 100%;
   display: flex;
   align-items: center;
@@ -1044,6 +1069,17 @@ img {
 @media screen and (max-width: 768px) {
   .slider {
     background: none;
+  }
+}
+
+.slider__item {
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .slider__img {
+    display: none;
   }
 }
 
@@ -1057,17 +1093,19 @@ img {
 .slider__content {
   display: flex;
   flex-direction: column;
-  margin-left: 54%;
+  margin-left: 6%;
+  flex: 1;
 }
 @media screen and (max-width: 768px) {
   .slider__content {
     margin-left: 0;
+    align-items: center;
   }
   .slider__content::before {
     content: "";
-    width: 20.5555555556rem;
+    width: 100%;
+    box-sizing: border-box;
     height: 18.6666666667rem;
-    padding: 0 22%;
     background: url("../img/decor/slider_chocolate-tablets.png") center center/contain no-repeat;
   }
 }
@@ -1076,13 +1114,30 @@ img {
   font-size: 2rem;
   font-weight: 700;
   text-transform: uppercase;
-  color: #000000;
+  color: #151515;
   margin-bottom: 1.2222222222rem;
 }
 @media screen and (max-width: 768px) {
   .slider__main-title {
-    padding: 0 17%;
+    white-space: nowrap;
     font-size: 1.6666666667rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .slider__main-title .first-word {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.slider__desc {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 768px) {
+  .slider__desc {
+    align-items: center;
   }
 }
 
@@ -1104,21 +1159,9 @@ img {
   display: flex;
   margin-bottom: 2.1111111111rem;
 }
-@media screen and (max-width: 768px) {
-  .slider__desc-info {
-    padding: 0 34%;
-  }
-}
-
 .slider__price {
   display: flex;
 }
-@media screen and (max-width: 768px) {
-  .slider__price {
-    padding: 0 29%;
-  }
-}
-
 .info__calories {
   margin-right: 3.0555555556rem;
 }
@@ -1199,4 +1242,132 @@ img {
   margin: 0 auto;
   padding-top: 1.4444444444rem;
   padding-bottom: 1.4444444444rem;
+}
+
+@media screen and (max-width: 768px) {
+  .team {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.team__list {
+  display: flex;
+}
+@media screen and (max-width: 768px) {
+  .team__list {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.team__item {
+  flex: 1;
+  width: calc(100% / 4 - 20px);
+}
+@media screen and (max-width: 768px) {
+  .team__item {
+    max-width: 12.4444444444rem;
+    width: 100%;
+  }
+}
+
+.team__avatar {
+  width: 12.2222222222rem;
+  height: 16rem;
+  margin-bottom: 1.4444444444rem;
+}
+
+.team__name {
+  color: #000000;
+  font-size: 1.1666666667rem;
+  font-weight: 700;
+  text-align: center;
+  position: relative;
+  width: 12.2222222222rem;
+  margin-bottom: 0.7222222222rem;
+}
+.team__name-link {
+  text-decoration: none;
+}
+.team__name-link:after {
+  content: "";
+  position: absolute;
+  top: 0.6111111111rem;
+  border: 5px solid transparent;
+  margin-left: 0.2777777778rem;
+  border-top: 7px solid #365a49;
+  border-bottom: 0;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+@media screen and (max-width: 768px) {
+  .team__avatar {
+    display: none;
+  }
+}
+
+.info {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.5s;
+  text-align: center;
+}
+.info__position {
+  color: #2a2323;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.info__desc {
+  color: #666666;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+@media screen and (max-width: 768px) {
+  .info__boris:before {
+    content: "";
+    display: flex;
+    background: url("../img/decor/boris_tablets.png") center center/contain no-repeat;
+    height: 200px;
+    margin-bottom: 1.3333333333rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .info__alla:before {
+    content: "";
+    display: flex;
+    background: url("../img/decor/alla_tablet.png") center center/contain no-repeat;
+    height: 200px;
+    margin-bottom: 1.3333333333rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .info__kirill:before {
+    content: "";
+    display: flex;
+    background: url("../img/decor/kirill_tablets.png") center center/contain no-repeat;
+    height: 200px;
+    margin-bottom: 1.3333333333rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .info__mila:before {
+    content: "";
+    display: flex;
+    background: url("../img/decor/mila_tablets.png") center center/contain no-repeat;
+    height: 200px;
+    margin-bottom: 1.3333333333rem;
+  }
+}
+
+.team-accordion--active .team__name-link {
+  color: #365a49;
+}
+.team-accordion--active .team__name-link::after {
+  transform: rotate(-180deg);
 }

@@ -1,6 +1,6 @@
 .slider{
-    background: url("../img/decor/chockolate_slider.png") left center / 47%  no-repeat;
-    object-fit: cover;
+    // background: url("../img/decor/chockolate_slider.png") left center / 47%  no-repeat;
+    // object-fit: cover;
     height: 100%;
     display: flex;
     align-items: center;
@@ -10,6 +10,17 @@
     //   width: rem(370px);
     //   height: rem(336px);  
     background: none; 
+    }
+}
+
+.slider__item{
+    display: flex;
+    align-items: center;
+}
+
+.slider__img{
+    @include tablets{
+        display: none;
     }
 }
 
@@ -23,16 +34,19 @@
 .slider__content{
     display: flex;
     flex-direction: column;
-    margin-left: 54%;
+    margin-left: 6%;
+    flex: 1;
 
     @include tablets{
         margin-left: 0;
+        align-items: center;
 
         &::before{
             content: '';
-            width: rem(370px);
+            width: 100%;
+            box-sizing: border-box;
             height: rem(336px);
-            padding: 0 22%;
+            // padding: 0 22%;
             background: url('../img/decor/slider_chocolate-tablets.png') center center / contain no-repeat;
         }
     }
@@ -42,12 +56,30 @@
     font-size: rem(36px);
     font-weight: 700;
     text-transform: uppercase;
-    color: #000000;
+    color: #151515;
     margin-bottom: rem(22px);
 
     @include tablets{
-        padding: 0 17%;
+        // padding: 0 17%;
+        white-space: nowrap;
         font-size: rem(30px);
+    }
+
+    @include phones{
+        .first-word{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
+.slider__desc{
+    display: flex;
+    flex-direction: column;
+    
+    @include tablets{
+        align-items: center;
     }
 }
 
@@ -69,7 +101,7 @@
     margin-bottom: rem(38px);
 
     @include tablets {
-        padding: 0 34%;
+        // padding: 0 34%;
     }
 }
 
@@ -77,6 +109,6 @@
     display: flex;
 
     @include tablets{
-        padding: 0 29%;
+        // padding: 0 29%;
     }
 }

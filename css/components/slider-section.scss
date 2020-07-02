@@ -19,3 +19,31 @@
     fill: #151515;
     cursor: pointer;
 }
+
+.arrow__right{
+
+    @include tablets{
+    position: relative;
+    bottom: 14%;
+    right: 18%;
+    }
+
+    @include phones{
+        right: 0;
+    }
+}
+
+.arrow__left{
+
+    @include tablets{
+        position: relative;
+        bottom: 14%;
+        left: 21%;
+        margin: 0;
+    }
+
+    @include phones{
+        left:0;
+    }
+}
+
