@@ -269,6 +269,93 @@
                                 </div>
                             </div>
                         </li>
+                        <li class="slider__item">
+                            <div class="slider__img">
+                                <img src="./img/decor/slider_grape.png" alt="chocolate" class="slider__img-pic">
+                            </div>
+                            <div class="slider__content">
+                                <div class="composition">
+                                    <div class="composition__content">
+                                        <svg class="composition__icon">
+                                            <use xlink:href="./img/icons/sprite.svg#chocolate-bar"></use>
+                                        </svg>
+                                        <div class="composition__text">Состав</div>
+                                        <ul class="drop-down">
+                                            <div class="drop-down-container">
+                                                <li class="drop-down__item">
+                                                    <svg class="drop-down__item--icon">
+                                                        <use xlink:href="./img/icons/sprite.svg#grape"></use>
+                                                    </svg>
+                                                    <div class="drop-down__text">Виноград</div>
+                                                    <div class="drop-down__weight">25г</div>
+                                                </li>
+                                                <li class="drop-down__item">
+                                                    <svg class="drop-down__item--icon">
+                                                        <use xlink:href="./img/icons/sprite.svg#almond"></use>
+                                                    </svg>
+                                                    <div class="drop-down__text">Миндаль</div>
+                                                    <div class="drop-down__weight">20г</div>
+                                                </li>
+                                                <li class="drop-down__item">
+                                                    <svg class="drop-down__item--icon">
+                                                        <use xlink:href="./img/icons/sprite.svg#powder"></use>
+                                                    </svg>
+                                                    <div class="drop-down__text">Сухое молоко</div>
+                                                    <div class="drop-down__weight">10г</div>
+                                                </li>
+                                                <li class="drop-down__item">
+                                                    <svg class="drop-down__item--icon">
+                                                        <use xlink:href="./img/icons/sprite.svg#seeds"></use>
+                                                    </svg>
+                                                    <div class="drop-down__text">Тыкв. семечки</div>
+                                                    <div class="drop-down__weight">20г</div>
+                                                </li>
+                                                <li class="drop-down__item">
+                                                    <svg class="drop-down__item--icon">
+                                                        <use xlink:href="./img/icons/sprite.svg#apitherapy"></use>
+                                                    </svg>
+                                                    <div class="drop-down__text">Зам. сахара</div>
+                                                    <div class="drop-down__weight">4г</div>
+                                                </li>
+                                                <li class="drop-down__item">
+                                                    <svg class="drop-down__item--icon">
+                                                        <use xlink:href="./img/icons/sprite.svg#beans"></use>
+                                                    </svg>
+                                                    <div class="drop-down__text">Какао бобы</div>
+                                                    <div class="drop-down__weight">4г</div>
+                                                </li>
+                                            </div>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="slider__main-title"><span class="first-word">Батончик</span>“Гранола 
+                                    виноград”</div>
+                                <div class="slider__desc">
+                                    <div class="slider__desc-text">
+                                        Гранола из винограда, грецкого ореха и кунжутных семечек. В состав также входят: сухое молоко, заменитель сахара и какао бобы.
+                                    </div>
+                                    <div class="slider__desc-info">
+                                        <div class="info__calories">
+                                            <div class="info__title">Калорийность</div>
+                                            <div class="info__quantity">110 ккал</div>
+                                        </div>
+                                        <div class="info__weight">
+                                            <div class="info__title">Вес</div>
+                                            <div class="info__quantity">95 грамм</div>
+                                        </div>
+                                    </div>
+                                    <div class="slider__price">
+                                        <div class="price">
+                                            <div class="price-number">140</div>
+                                            <svg class="price-icon">
+                                                <use xlink:href="./img/icons/sprite.svg#rub"></use>
+                                            </svg>
+                                        </div>
+                                        <a href="#" class="btn btn-theme-green">Заказать</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
                     </ul>
                     <div class="arrow__right">
                         <svg class="arrow__right--icon">
@@ -348,49 +435,97 @@
                 <div class="container">
                     <h2 class="section__title">Отзывы</h2>
                     <div class="reviews">
-                        <div class="reviews__display">
-                            <div class="reviews__display-inner">
-                                <div class="reviews__avatar">
-                                    <img src="./img/decor/reviews1.png" alt="black hair girl"
-                                        class="reviews__avatar-img">
-                                </div>
-                                <article class="reviews__content">
-                                    <h3 class="reviews__title">Лучший перекус</h3>
-                                    <div class="reviews__text">
-                                        <p>
-                                            <!--почему без класса, не понял -->
-                                            Я ем малыми порциями, но часто. Это повышает мою продуктивность в разы. В
-                                            течение дня сижу за компьютером
-                                            и часто отходить в кафе или на кухню просто не могу себе позволить. А
-                                            батончик –
-                                            он всегда под рукой. Это приятно
-                                            и удобно.
-                                        </p>
+                        <ul class="reviews__list">
+                            <li class="reviews__display reviews__display-active">
+                                <div class="reviews__display-inner">
+                                    <div class="reviews__avatar">
+                                        <img src="./img/decor/reviews1.png" alt="black hair girl"
+                                            class="reviews__avatar-img">
                                     </div>
-                                    <div class="reviews__author">Алёна Хмельницкая</div>
-                                </article>
-                            </div>
-                        </div>
-                        <ul class="reviews__switcher">
-                            <li class="reviews__switcher-item interactive-avatar interactive-avatar--active">
-                                <a href="#" class="interactive-avatar__link">
-                                    <img src="./img/decor/reviews1.png" alt="black hair girl"
-                                        class="interactive-avatar__img">
-                                </a>
+                                    <article class="reviews__content">
+                                        <h3 class="reviews__title">Лучший перекус</h3>
+                                        <div class="reviews__text">
+                                            <p>
+                                                <!--почему без класса, не понял -->
+                                                Я ем малыми порциями, но часто. Это повышает мою продуктивность в разы. В
+                                                течение дня сижу за компьютером
+                                                и часто отходить в кафе или на кухню просто не могу себе позволить. А
+                                                батончик –
+                                                он всегда под рукой. Это приятно
+                                                и удобно.
+                                            </p>
+                                        </div>
+                                        <div class="reviews__author">Алёна Хмельницкая</div>
+                                    </article>
+                                </div>
                             </li>
-                            <li class="reviews__switcher-item interactive-avatar">
-                                <a href="#" class="interactive-avatar__link">
-                                    <img src="./img/decor/reviews1.png" alt="orange hair girl"
-                                        class="interactive-avatar__img">
-                                </a>
+                            <li class="reviews__display">
+                                <div class="reviews__display-inner">
+                                    <div class="reviews__avatar">
+                                        <img src="./img/decor/orrange_girl.png" alt="black hair girl"
+                                            class="reviews__avatar-img">
+                                    </div>
+                                    <article class="reviews__content">
+                                        <h3 class="reviews__title">Лучший перекус</h3>
+                                        <div class="reviews__text">
+                                            <p>
+                                                <!--почему без класса, не понял -->
+                                                Я ем малыми порциями, но часто. Это повышает мою продуктивность в разы. В
+                                                течение дня сижу за компьютером
+                                                и часто отходить в кафе или на кухню просто не могу себе позволить. А
+                                                батончик –
+                                                он всегда под рукой. Это приятно
+                                                и удобно.
+                                            </p>
+                                        </div>
+                                        <div class="reviews__author">Алёна Хмельницкая</div>
+                                    </article>
+                                </div>
                             </li>
-                            <li class="reviews__switcher-item interactive-avatar">
-                                <a href="#" class="interactive-avatar__link">
-                                    <img src="./img/decor/reviews1.png" alt="boy" class="interactive-avatar__img">
-                                </a>
+                            <li class="reviews__display">
+                                <div class="reviews__display-inner">
+                                    <div class="reviews__avatar">
+                                        <img src="./img/decor/reviews1.png" alt="black hair girl"
+                                            class="reviews__avatar-img">
+                                    </div>
+                                    <article class="reviews__content">
+                                        <h3 class="reviews__title">Лучший перекус</h3>
+                                        <div class="reviews__text">
+                                            <p>
+                                                <!--почему без класса, не понял -->
+                                                Я ем малыми порциями, но часто. Это повышает мою продуктивность в разы. В
+                                                течение дня сижу за компьютером
+                                                и часто отходить в кафе или на кухню просто не могу себе позволить. А
+                                                батончик –
+                                                он всегда под рукой. Это приятно
+                                                и удобно.
+                                            </p>
+                                        </div>
+                                        <div class="reviews__author">Алёна Хмельницкая</div>
+                                    </article>
+                                </div>
                             </li>
                         </ul>
                     </div>
+                    <ul class="reviews__switcher">
+                        <li class="reviews__switcher-item interactive-avatar interactive-avatar--active">
+                            <a href="#" class="interactive-avatar__link">
+                                <img src="./img/decor/reviews1.png" alt="black hair girl"
+                                    class="interactive-avatar__img">
+                            </a>
+                        </li>
+                        <li class="reviews__switcher-item interactive-avatar">
+                            <a href="#" class="interactive-avatar__link">
+                                <img src="./img/decor/reviews1.png" alt="orange hair girl"
+                                    class="interactive-avatar__img">
+                            </a>
+                        </li>
+                        <li class="reviews__switcher-item interactive-avatar">
+                            <a href="#" class="interactive-avatar__link">
+                                <img src="./img/decor/reviews1.png" alt="boy" class="interactive-avatar__img">
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </section>
 
@@ -561,7 +696,14 @@
 
     </div>
 
+    //libraries
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+
     <script src="./scripts/menu.js"></script>
+    <script src="./scripts/slider.js"></script>
     <script src="./scripts/accordion.js"></script>
 </body>
 

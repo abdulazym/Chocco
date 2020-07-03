@@ -17,6 +17,7 @@
 .team__item{
     flex: 1;
     width: calc(100% / 4 - 20px);
+    overflow: hidden;
     
     @include tablets{
         max-width: rem(224px);

@@ -41,9 +41,25 @@
     }
 }
 
+.reviews__list{
+    position: relative;
+    min-height: 280px;
+}
+
 .reviews__display{
+    position: absolute;
+    top: 0;
+    left:0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
     background: #f8faf9;
     padding: rem(50px) rem(45px) rem(34px);
+
+    &-active{
+        opacity: 1;
+        position: static;
+    }
 
     &:before{
         content:"";

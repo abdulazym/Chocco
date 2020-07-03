@@ -534,9 +534,24 @@ img {
   right: 0;
 }
 
+.reviews__list {
+  position: relative;
+  min-height: 280px;
+}
+
 .reviews__display {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
   background: #f8faf9;
   padding: 2.7777777778rem 2.5rem 1.8888888889rem;
+}
+.reviews__display-active {
+  opacity: 1;
+  position: static;
 }
 .reviews__display:before {
   content: "";
@@ -1162,6 +1177,10 @@ img {
 .slider__price {
   display: flex;
 }
+.bx-wrapper {
+  width: 95%;
+}
+
 .info__calories {
   margin-right: 3.0555555556rem;
 }
@@ -1264,6 +1283,7 @@ img {
 .team__item {
   flex: 1;
   width: calc(100% / 4 - 20px);
+  overflow: hidden;
 }
 @media screen and (max-width: 768px) {
   .team__item {
