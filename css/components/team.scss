@@ -22,6 +22,7 @@
     @include tablets{
         max-width: rem(224px);
         width: 100%;
+        overflow: visible;
     }
 }
 .team__avatar{

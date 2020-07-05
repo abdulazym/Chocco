@@ -325,11 +325,11 @@ img {
   background: #365a49;
   color: #fff;
 }
-.btn-theme-green {
+.btn_theme_green {
   background: #365a49;
   color: #fff;
 }
-.btn-theme-green:hover {
+.btn_theme_green:hover {
   background: #fff;
   color: #365a49;
 }
@@ -548,6 +548,7 @@ img {
   opacity: 0;
   background: #f8faf9;
   padding: 2.7777777778rem 2.5rem 1.8888888889rem;
+  transition: 0.3s;
 }
 .reviews__display-active {
   opacity: 1;
@@ -603,8 +604,14 @@ img {
     padding-right: 0;
     text-align: center;
   }
-  .reviews__content:before {
+  .reviews__content--blackgirl:before {
+    content: url("../img/decor/black-girl_tablets.png");
+  }
+  .reviews__content--orrangegirl:before {
     content: url("../img/decor/orrange_girl_tablets.png");
+  }
+  .reviews__content--boy:before {
+    content: url("../img/decor/boy_tablets.png");
   }
 }
 
@@ -996,7 +1003,7 @@ img {
   margin-right: 0.5rem;
 }
 
-.arrow__left--icon {
+.arrow__left-icon {
   width: 0.7222222222rem;
   height: 1.5555555556rem;
   transform: rotate(180deg);
@@ -1004,7 +1011,7 @@ img {
   cursor: pointer;
 }
 
-.arrow__right--icon {
+.arrow__right-icon {
   width: 0.7222222222rem;
   height: 1.5555555556rem;
   fill: #151515;
@@ -1098,7 +1105,7 @@ img {
   }
 }
 
-.slider__container {
+.container__slider {
   display: flex;
   max-width: 1000px;
   align-items: center;
@@ -1122,6 +1129,13 @@ img {
     box-sizing: border-box;
     height: 18.6666666667rem;
     background: url("../img/decor/slider_chocolate-tablets.png") center center/contain no-repeat;
+  }
+  .slider__content--second::before {
+    content: "";
+    width: 100%;
+    box-sizing: border-box;
+    height: 18.6666666667rem;
+    background: url("../../img/decor/slider_grape.png") center center/contain no-repeat;
   }
 }
 
@@ -1204,7 +1218,7 @@ img {
   margin-right: 1.7222222222rem;
 }
 
-.price-number {
+.price__number {
   color: #151515;
   font-size: 3.3333333333rem;
   font-weight: 300;
@@ -1229,7 +1243,7 @@ img {
   display: none;
 }
 
-.drop-down__item--icon {
+.drop-down-icon {
   width: 1.6666666667rem;
   height: 1.9444444444rem;
   margin-right: 1.7222222222rem;
@@ -1289,6 +1303,7 @@ img {
   .team__item {
     max-width: 12.4444444444rem;
     width: 100%;
+    overflow: visible;
   }
 }
 
@@ -1390,4 +1405,39 @@ img {
 }
 .team-accordion--active .team__name-link::after {
   transform: rotate(-180deg);
+}
+
+.error {
+  color: red;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: #353739;
+  z-index: 200;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.99;
+}
+
+.modal__content {
+  padding: 0 5%;
+  height: 9.5555555556rem;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.hide {
+  display: none;
+}
+
+.modal__btn {
+  cursor: pointer;
 }

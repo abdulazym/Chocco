@@ -55,6 +55,7 @@
     opacity: 0;
     background: #f8faf9;
     padding: rem(50px) rem(45px) rem(34px);
+    transition: 0.3s;
 
     &-active{
         opacity: 1;
@@ -111,8 +112,23 @@
         padding-right: 0;
         text-align: center;
 
-        &:before{
-            content: url("../img/decor/orrange_girl_tablets.png");
+        // &:before{
+        //     content: url("../img/decor/orrange_girl_tablets.png");
+        // }
+        &--blackgirl{
+            &:before{
+                    content: url("../img/decor/black-girl_tablets.png");
+                }
+        }
+        &--orrangegirl{
+            &:before{
+                    content: url("../img/decor/orrange_girl_tablets.png");
+                }
+        }
+        &--boy{
+            &:before{
+                    content: url("../img/decor/boy_tablets.png");
+                }
         }
     }
 }
