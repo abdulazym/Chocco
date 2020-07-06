@@ -1233,14 +1233,12 @@ img {
   fill: #151515;
 }
 
-.drop-down {
-  width: 15rem;
-  position: absolute;
-  background: white;
-  top: 0;
-  left: 139%;
-  opacity: 0.9;
-  display: none;
+.drop-down__list {
+  width: 81%;
+  max-width: 220px;
+  margin: 0 auto;
+  padding-top: 1.4444444444rem;
+  padding-bottom: 1.4444444444rem;
 }
 
 .drop-down-icon {
@@ -1269,12 +1267,14 @@ img {
   width: 62%;
 }
 
-.drop-down-container {
-  width: 81%;
-  max-width: 220px;
-  margin: 0 auto;
-  padding-top: 1.4444444444rem;
-  padding-bottom: 1.4444444444rem;
+.drop-down {
+  width: 15rem;
+  position: absolute;
+  background: white;
+  top: 0;
+  left: 139%;
+  opacity: 0.9;
+  display: none;
 }
 
 @media screen and (max-width: 768px) {

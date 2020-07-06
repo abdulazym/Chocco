@@ -15,6 +15,13 @@ send.addEventListener('click', sendForm);
         data.append("comment", myForm.elements.comment.value);
         data.append("to", 'adadaev2016@gmail.com');
 
+        // let data = {
+        //     name: myForm.elements.name.value,
+        //     phone: myForm.elements.phone.value,
+        //     comment: myForm.elements.comment.value,
+        //     to: 'adadaev2016@gmail.com'        
+        // }
+
         const xhr = new XMLHttpRequest();
         xhr.responseType = 'json';
         xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
