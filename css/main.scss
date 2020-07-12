@@ -10,6 +10,7 @@ $darkGreen: #365a49;
 $z-fixed-menu: 100;
 $z-decor-elem: 100;
 $z-tabs: 2;
+$z-acco: 200;
 //breakpoints
 
 $tablets: 768px;
@@ -54,3 +55,4 @@ $phones: 480px;
 @import "components/info";
 @import "components/error";
 @import "components/modal";
+@import "components/accordeon";

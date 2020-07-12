@@ -49,19 +49,18 @@
             // padding: 0 22%;
             background: url('../img/decor/slider_chocolate-tablets.png') center center / contain no-repeat;
         }
-
-        &--second{
+    
             &::before{
                 content: '';
                 width: 100%;
                 box-sizing: border-box;
                 height: rem(336px);
                 // padding: 0 22%;
-                background: url('../../img/decor/slider_grape.png') center center / contain no-repeat;
+                background: url('../img/decor/slider_grape.png') center center / contain no-repeat;
             }
         }
     }
-}
+
 
 .slider__main-title{
     font-size: rem(36px);

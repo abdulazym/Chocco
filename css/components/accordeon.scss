@@ -1,0 +1,75 @@
+.accordeon{
+    background: url('../img/bg/menu_bg.png') #000000 center center / cover no-repeat;
+    flex-direction: row;
+    position: relative;
+    justify-content: flex-start;
+    z-index: $z-acco;
+}
+
+.section__title--acco{
+    color: white;
+    font-size: 48px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.accordeon__list{
+    position: absolute;
+    top:0;
+    right: 0;
+    height: 100%;
+    display: flex;
+}
+
+.accordeon__item{
+    height: 100%;
+    display: flex;
+}
+
+.accordeon__content{
+    min-width: 530px;
+    height: 100%;
+    padding: 50px 127px 50px 27px;
+    overflow-y: auto;
+    background: rgba(51, 53 ,55, .93);
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 23.97px;
+    position: relative;
+}
+
+.accordeon__title{
+    color: #ffffff;
+    font-size: 48px;
+    font-weight: 700;
+    transform: rotate(-90deg);
+    width: 100%;
+    white-space: nowrap;
+}
+
+.accordeon__trigger{
+    display: flex;
+    text-decoration: none;
+    width: 100px;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: black;// Почему без этого свойства плохо выглядит?
+    background-size: cover;
+    background-position: left bottom;
+    padding-bottom: 40px;
+}
+
+.accordeon__wrap{
+    width: 0;
+    overflow:hidden;
+    transition: 1s;
+}
+
+.accordeon__item-active .accordeon__wrap{
+    width: 530px;
+
+    // @include tablets {
+    //     width: 470px;
+    // }
+}

@@ -30,7 +30,7 @@ body {
 .wrapper {
   position: relative;
   width: 100%;
-  min-height: 100%;
+  height: 100%;
   overflow: hidden;
 }
 
@@ -84,6 +84,12 @@ a {
 img {
   display: block;
   max-width: 100%;
+}
+
+.maincontent {
+  height: 100%;
+  transition: transform 0.6s;
+  will-change: transform;
 }
 
 .hero {
@@ -881,6 +887,13 @@ img {
   transform: translate(-50%, -50%);
 }
 
+.fixed-menu--shadowed .fixed-menu__link:before {
+  background: #000000;
+}
+.fixed-menu--shadowed .fixed-menu__item--active .fixed-menu__link {
+  border-color: #000000;
+}
+
 .hamburger {
   width: 24px;
   height: 20px;
@@ -924,6 +937,12 @@ img {
   width: 20px;
   position: absolute;
   top: 32px;
+}
+
+.hamburger--open-acco {
+  position: absolute;
+  top: 0;
+  right: 40px;
 }
 
 .map {
@@ -1130,12 +1149,12 @@ img {
     height: 18.6666666667rem;
     background: url("../img/decor/slider_chocolate-tablets.png") center center/contain no-repeat;
   }
-  .slider__content--second::before {
+  .slider__content::before {
     content: "";
     width: 100%;
     box-sizing: border-box;
     height: 18.6666666667rem;
-    background: url("../../img/decor/slider_grape.png") center center/contain no-repeat;
+    background: url("../img/decor/slider_grape.png") center center/contain no-repeat;
   }
 }
 
@@ -1440,4 +1459,76 @@ img {
 
 .modal__btn {
   cursor: pointer;
+}
+
+.accordeon {
+  background: url("../img/bg/menu_bg.png") #000000 center center/cover no-repeat;
+  flex-direction: row;
+  position: relative;
+  justify-content: flex-start;
+  z-index: 200;
+}
+
+.section__title--acco {
+  color: white;
+  font-size: 48px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.accordeon__list {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  display: flex;
+}
+
+.accordeon__item {
+  height: 100%;
+  display: flex;
+}
+
+.accordeon__content {
+  min-width: 530px;
+  height: 100%;
+  padding: 50px 127px 50px 27px;
+  overflow-y: auto;
+  background: rgba(51, 53, 55, 0.93);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 23.97px;
+  position: relative;
+}
+
+.accordeon__title {
+  color: #ffffff;
+  font-size: 48px;
+  font-weight: 700;
+  transform: rotate(-90deg);
+  width: 100%;
+  white-space: nowrap;
+}
+
+.accordeon__trigger {
+  display: flex;
+  text-decoration: none;
+  width: 100px;
+  justify-content: center;
+  align-items: flex-end;
+  background-color: black;
+  background-size: cover;
+  background-position: left bottom;
+  padding-bottom: 40px;
+}
+
+.accordeon__wrap {
+  width: 0;
+  overflow: hidden;
+  transition: 1s;
+}
+
+.accordeon__item-active .accordeon__wrap {
+  width: 530px;
 }
