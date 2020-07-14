@@ -1,0 +1,128 @@
+.slider{
+    // background: url("../img/decor/chockolate_slider.png") left center / 47%  no-repeat;
+    // object-fit: cover;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    @include tablets{
+    //   background: url("../img/decor/slider_chocolate-tablets.png") top  / contain no-repeat;
+    //   width: rem(370px);
+    //   height: rem(336px);  
+    background: none; 
+    }
+}
+
+.slider__item{
+    display: flex;
+    align-items: center;
+}
+
+.slider__img{
+    @include tablets{
+        display: none;
+    }
+}
+
+.container__slider{
+    display: flex;
+    max-width: 1000px;
+    align-items: center;
+    height: 100%;
+}
+
+.slider__content{
+    display: flex;
+    flex-direction: column;
+    margin-left: 6%;
+    flex: 1;
+
+    @include tablets{
+        margin-left: 0;
+        align-items: center;
+
+        &::before{
+            content: '';
+            width: 100%;
+            box-sizing: border-box;
+            height: rem(336px);
+            // padding: 0 22%;
+            background: url('../img/decor/slider_chocolate-tablets.png') center center / contain no-repeat;
+        }
+    
+            &::before{
+                content: '';
+                width: 100%;
+                box-sizing: border-box;
+                height: rem(336px);
+                // padding: 0 22%;
+                background: url('../img/decor/slider_grape.png') center center / contain no-repeat;
+            }
+        }
+    }
+
+
+.slider__main-title{
+    font-size: rem(36px);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #151515;
+    margin-bottom: rem(22px);
+
+    @include tablets{
+        // padding: 0 17%;
+        white-space: nowrap;
+        font-size: rem(30px);
+    }
+
+    @include phones{
+        .first-word{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
+.slider__desc{
+    display: flex;
+    flex-direction: column;
+    
+    @include tablets{
+        align-items: center;
+    }
+}
+
+.slider__desc-text{
+    font-size: rem(18px);
+    font-weight: 400;
+    color: #666666;
+    padding-right: 21%;
+    margin-bottom: rem(47px);
+
+    @include tablets{
+        padding: 0 11%;
+        text-align: center;
+    }
+}
+
+.slider__desc-info{
+    display: flex;
+    margin-bottom: rem(38px);
+
+    @include tablets {
+        // padding: 0 34%;
+    }
+}
+
+.slider__price{
+    display: flex;
+
+    @include tablets{
+        // padding: 0 29%;
+    }
+}
+
+.bx-wrapper{
+    width: 95%;
+}

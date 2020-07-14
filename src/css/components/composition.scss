@@ -1,0 +1,39 @@
+.composition{
+    width: rem(90px);
+    height: rem(90px);
+    background: #86c3d7;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: rem(37px);
+
+    &:hover{
+        .drop-down{
+            display: block;
+        }
+    }
+
+    @include tablets{
+        display: none;
+    }
+}
+
+.composition__icon{
+    width: rem(51px);
+    height: rem(51px);
+    fill: #ffffff;
+}
+
+.composition__text{
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.composition__content{
+    padding-top: rem(10px);
+    position: relative;
+}

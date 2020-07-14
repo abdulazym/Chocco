@@ -946,7 +946,6 @@ img {
 }
 
 .map {
-  background: url("../img/bg/map.png") center/cover no-repeat;
   height: 100%;
 }
 
@@ -1531,4 +1530,155 @@ img {
 
 .accordeon__item-active .accordeon__wrap {
   width: 530px;
+}
+
+.player-section {
+  background-color: #f8faf9;
+}
+
+.player-section__container {
+  display: flex;
+  justify-content: center;
+}
+
+.player {
+  position: relative;
+}
+
+.player__splash {
+  width: 660px;
+  height: 370px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.player-active .player__splash {
+  background: none;
+}
+.player-active .player__splash .player__splash--start {
+  display: none;
+}
+
+.player__splash--start {
+  width: 4.5555555556rem;
+  height: 6.5555555556rem;
+  opacity: 0.9;
+  fill: white;
+  cursor: pointer;
+  position: absolute;
+}
+
+.player__start {
+  width: 0.8888888889rem;
+  height: 1.2222222222rem;
+  fill: #626262;
+  cursor: pointer;
+}
+
+.player__volume {
+  height: 1.2222222222rem;
+}
+
+.player__volume--icon {
+  width: 1rem;
+  height: 1.2222222222rem;
+  fill: #626262;
+  cursor: pointer;
+}
+
+.volume--turn {
+  display: none;
+  background: #626262;
+  width: 4px;
+  height: 30px;
+  transform: rotate(37deg);
+  position: absolute;
+  right: 110px;
+}
+
+.player__controls {
+  background: #404040;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 35px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 0 1.1111111111rem;
+}
+
+.player__playback {
+  width: 24.6666666667rem;
+  height: 0.2222222222rem;
+  background-color: #626262;
+  border-radius: 2px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  cursor: pointer;
+}
+
+.player__playback--volume {
+  cursor: pointer;
+  width: 3.2222222222rem;
+  height: 0.2222222222rem;
+  background-color: #626262;
+  border-radius: 2px;
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+.player__sircle {
+  width: 13px;
+  height: 13px;
+  background-color: #626262;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.player__sircle--volume {
+  cursor: pointer;
+  width: 13px;
+  height: 13px;
+  background-color: #626262;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  transition: 0.5s;
+}
+
+.player--active .player__splash--start {
+  display: none;
+}
+
+.pause {
+  cursor: pointer;
+  display: none;
+  width: 14px;
+  height: 22px;
+  border: none;
+  position: relative;
+}
+.pause:after, .pause:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 5px;
+  top: 0;
+  bottom: 0;
+  background: #626262;
+}
+.pause::after {
+  right: 0;
+}
+.pause::before {
+  left: 0;
 }
