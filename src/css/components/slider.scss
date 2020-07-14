@@ -16,11 +16,14 @@
 .slider__item{
     display: flex;
     align-items: center;
-}
 
-.slider__img{
     @include tablets{
-        display: none;
+        flex-direction: column;
+
+        .slider__img-pic{
+            width: 370px;
+            height: 337px;
+        }
     }
 }
 
@@ -40,24 +43,6 @@
     @include tablets{
         margin-left: 0;
         align-items: center;
-
-        &::before{
-            content: '';
-            width: 100%;
-            box-sizing: border-box;
-            height: rem(336px);
-            // padding: 0 22%;
-            background: url('../img/decor/slider_chocolate-tablets.png') center center / contain no-repeat;
-        }
-    
-            &::before{
-                content: '';
-                width: 100%;
-                box-sizing: border-box;
-                height: rem(336px);
-                // padding: 0 22%;
-                background: url('../img/decor/slider_grape.png') center center / contain no-repeat;
-            }
         }
     }
 

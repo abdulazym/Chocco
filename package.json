@@ -36,5 +36,11 @@
     "gulp-svgo": "^2.2.1",
     "gulp-uglify": "^3.0.2",
     "node-sass": "^4.14.1"
+  },
+  "dependencies": {
+    "bxslider": "^4.2.14",
+    "jquery": "^3.5.1",
+    "normalize": "^0.3.1",
+    "normalize.css": "^8.0.1"
   }
 }
