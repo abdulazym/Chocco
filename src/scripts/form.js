@@ -40,7 +40,8 @@ send.addEventListener('click', sendForm);
 modal.addEventListener('click', e=>{
     if(e.target.closest('.modal__btn') || e.target.classList.contains('modal')) {
         document.body.style.overflow = '';
-        modal.classList.add('hide');
+        modal.classList.add('hide');;
+        myForm.reset();
     }
 })
 

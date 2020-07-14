@@ -13,6 +13,7 @@
         color: #666666;
         font-size: rem(18px);
         font-weight: 300;
+        margin-bottom: 15px;
     }
 
     // @include tablets{
@@ -26,48 +27,57 @@
     // }
 }
 
-.info__boris{
+// .info__boris{
+//     @include tablets{
+//         &:before{
+//             content: '';
+//             display: flex;
+//             background: url('../img/decor/boris_tablets.png') center center / contain no-repeat;
+//             height: 200px;
+//             margin-bottom: rem(24px);
+//         }
+//     }
+// }
+// .info__alla{
+//     @include tablets{
+//         &:before{
+//             content: '';
+//             display: flex;
+//             background: url('../img/decor/alla_tablet.png') center center / contain no-repeat;
+//             height: 200px;
+//             margin-bottom: rem(24px);
+//         }
+//     }
+// }
+// .info__kirill{
+//     @include tablets{
+//         &:before{
+//             content: '';
+//             display: flex;
+//             background: url('../img/decor/kirill_tablets.png') center center / contain no-repeat;
+//             height: 200px;
+//             margin-bottom: rem(24px);
+//         }
+//     }
+// }
+// .info__mila{
+//     @include tablets{
+//         &:before{
+//             content: '';
+//             display: flex;
+//             background: url('../img/decor/mila_tablets.png') center center / contain no-repeat;
+//             height: 200px;
+//             margin-bottom: rem(24px);
+//         }
+//     }
+// }
+
+.info__img{
+    display: none;
+
     @include tablets{
-        &:before{
-            content: '';
-            display: flex;
-            background: url('../img/decor/boris_tablets.png') center center / contain no-repeat;
-            height: 200px;
-            margin-bottom: rem(24px);
-        }
-    }
-}
-.info__alla{
-    @include tablets{
-        &:before{
-            content: '';
-            display: flex;
-            background: url('../img/decor/alla_tablet.png') center center / contain no-repeat;
-            height: 200px;
-            margin-bottom: rem(24px);
-        }
-    }
-}
-.info__kirill{
-    @include tablets{
-        &:before{
-            content: '';
-            display: flex;
-            background: url('../img/decor/kirill_tablets.png') center center / contain no-repeat;
-            height: 200px;
-            margin-bottom: rem(24px);
-        }
-    }
-}
-.info__mila{
-    @include tablets{
-        &:before{
-            content: '';
-            display: flex;
-            background: url('../img/decor/mila_tablets.png') center center / contain no-repeat;
-            height: 200px;
-            margin-bottom: rem(24px);
-        }
+        display: block;
+        margin-bottom: 23px;
     }
 }
 

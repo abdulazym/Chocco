@@ -111,25 +111,23 @@
         margin-left: 0;
         padding-right: 0;
         text-align: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
 
         // &:before{
         //     content: url("../img/decor/orrange_girl_tablets.png");
         // }
-        &--blackgirl{
-            &:before{
-                    content: url("../img/decor/black-girl_tablets.png");
-                }
-        }
-        &--orrangegirl{
-            &:before{
-                    content: url("../img/decor/orrange_girl_tablets.png");
-                }
-        }
-        &--boy{
-            &:before{
-                    content: url("../img/decor/boy_tablets.png");
-                }
-        }
+        
+    }
+}
+
+.reviews__content-img{
+    display: none;
+     
+    @include tablets {
+        display: block;
+        margin-bottom: 20px;
     }
 }
 
