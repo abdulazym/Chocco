@@ -128,6 +128,17 @@ let eventsInit = ()=>{
         }
     })
 
+    $('.player__playback--volume').click(e=>{
+        const playback = $(e.currentTarget);
+        const volumePercent = player.volume / 100;
+        const clickedPosition = e.originalEvent.layerX;
+        const newVolumePositionPercent = (clickedPosition / playback.width()) * 100;
+
+        $(".player__sircle--volume").css({
+            left: `${newVolumePositionPercent}%`
+          }); 
+          player.volume = newVolumePositionPercent / 100;
+    })
 }
 
 

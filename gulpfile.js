@@ -1,4 +1,4 @@
-const {src, dest, task, series, watch} = require( "gulp");
+const {src, dest, task, series, watch, parallel} = require( "gulp");
 const rm = require( "gulp-rm" );
 const sass = require("gulp-sass");
 const concat = require("gulp-concat");
@@ -12,8 +12,13 @@ const cleanCSS = require("gulp-clean-css");
 const sourcemaps = require("gulp-sourcemaps");
 const babel = require("gulp-babel");
 const uglify = require("gulp-uglify");
+const gulpif = require('gulp-if');
 // const svgo = require("gulp-svgo");
 // const svgSprite = require("gulp-svg-sprite");
+
+const env = process.env.NODE_ENV;
+
+const {DIST_PATH, SRC_PATH} = require('./gulp.config.js');
 
 sass.compiler = require("node-sass");
 
@@ -30,13 +35,13 @@ task("copy:html", ()=>{
 
 task("copy:img", ()=>{
   return src("src/img/**/*.*")
-  .pipe(dest("dist"))
+  .pipe(dest("dist/img"))
   .pipe(reload({ stream: true}));
 });
 
 task("copy:video", ()=>{
   return src("src/video/*.*")
-  .pipe(dest("dist"))
+  .pipe(dest("dist/video"))
   .pipe(reload({ stream: true}));
 });
 
@@ -47,17 +52,18 @@ const styles = [
 
 task('styles', ()=>{
     return src(styles)
-    .pipe(sourcemaps.init())
+    .pipe(gulpif(env === "dev", sourcemaps.init()))
     .pipe(concat('main.min.scss'))
     .pipe(sass().on('error', sass.logError))
     // .pipe(px2rem())
-    .pipe(autoprefixer({
+    .pipe(gulpif(env === "dev",
+      autoprefixer({
             browsers: ["last 2 versions"],
             cascade: false
-    }))
-    .pipe(gcmq())
-    .pipe(cleanCSS())
-    .pipe(sourcemaps.write())
+    })))
+    .pipe(gulpif(env === 'prod', gcmq()))
+    .pipe(gulpif(env === 'prod', cleanCSS()))
+    .pipe(gulpif(env === 'dev', sourcemaps.write()))
     .pipe(dest('dist'))
     .pipe(reload({stream: true}));
 });
@@ -70,14 +76,14 @@ const libs = [
 
 task('scripts', ()=>{
   return src(libs)
-    .pipe(sourcemaps.init())
+    .pipe(gulpif(env === 'dev', sourcemaps.init()))
     .pipe(concat('main.min.js', {newLine: ";"}))
-    .pipe(
+    .pipe(gulpif(env === 'prod',
       babel({
       presets: ['@babel/env']
-    }))
-    .pipe(uglify())
-    .pipe(sourcemaps.write())
+    })))
+    .pipe(gulpif(env === 'prod', uglify()))
+    .pipe(gulpif(env === 'dev', sourcemaps.write()))
     .pipe(dest('dist'))
     .pipe(reload({stream: true}));
 })
@@ -91,10 +97,25 @@ task('server', ()=> {
     });
 });
 
-watch("./src/css/**/*.scss", series("styles"));
-watch("./src/*.html", series("copy:html"));
-watch("./src/scripts/*.js", series("scripts"));
-watch("src/img/**/*.*", series("copy:img"));
-watch("src/video/**/*.*", series("copy:video"));
+task("watch", ()=>{
+  watch("./src/css/**/*.scss", series("styles"));
+  watch("./src/*.html", series("copy:html"));
+  watch("./src/scripts/*.js", series("scripts"));
+  watch("src/img/**/*.*", series("copy:img"));
+  watch("src/video/**/*.*", series("copy:video"));
+});
 
-task("default", series("clean", "copy:html", "copy:img", "styles", "copy:video", "scripts", "server"));
+
+task(
+  "default",
+   series("clean",
+   parallel("copy:html", "copy:img", "styles", "copy:video", "scripts"),
+   parallel("watch", "server")
+   )
+  );
+
+  task(
+    "build",
+    series("clean",
+    parallel("copy:html", "copy:img", "styles", "copy:video", "scripts"))
+  )

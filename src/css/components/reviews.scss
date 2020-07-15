@@ -2,7 +2,7 @@
     position: relative;
 
     &:before{
-        content: url("../img/decor/berries_leafs2.png");
+        content: url("./img/decor/berries_leafs2.png");
         position: absolute;
         bottom:rem(-243px);
         left:0;
@@ -10,7 +10,7 @@
     }
 
     &:after{
-        content: url("../img/decor/strawberry.png");
+        content: url("./img/decor/strawberry.png");
         position:absolute;
         top: rem(72px);
         right: rem(137px);
@@ -34,7 +34,7 @@
     // background: url("../img/decor/bg_pattern_phones.png") top right no-repeat;
 
     &:after{
-        content: url("../img/decor/bg_pattern_phones.png");
+        content: url("./img/decor/bg_pattern_phones.png");
         position: absolute;
         top:0;
         right:0;
@@ -127,7 +127,7 @@
      
     @include tablets {
         display: block;
-        margin-bottom: 20px;
+        margin-bottom: rem(20px);
     }
 }
 

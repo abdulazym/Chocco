@@ -1,6 +1,6 @@
 .benefits-section{
     position:relative;
-    background: url("../img/decor/leaf-white.png") no-repeat left top 57%;
+    background: url("./img/decor/leaf-white.png") no-repeat left top 57%;
 
     @include tablets {
         background-position: left top 6%;
@@ -19,6 +19,6 @@
         position: absolute;
         left:0;
         bottom:rem(-120px);
-        content: url("../img/decor/raspberry.png");
+        content: url("./img/decor/raspberry.png");
     }
 }

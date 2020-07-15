@@ -1,5 +1,5 @@
 .accordeon{
-    background: url('../img/bg/menu_bg.png') #000000 center center / cover no-repeat;
+    background: url('./img/bg/menu_bg.png') #000000 center center / cover no-repeat;
     flex-direction: row;
     position: relative;
     justify-content: flex-start;
@@ -27,9 +27,8 @@
 }
 
 .accordeon__content{
-    min-width: 530px;
     height: 100%;
-    padding: 50px 127px 50px 27px;
+    padding: rem(50px) rem(127px) rem(50px) rem(27px);
     overflow-y: auto;
     background: rgba(51, 53 ,55, .93);
     color: #ffffff;
@@ -37,6 +36,10 @@
     font-weight: 400;
     line-height: 23.97px;
     position: relative;
+
+    @include tablets {
+        padding-right: rem(45px);
+    }
 }
 
 .accordeon__title{
@@ -68,8 +71,19 @@
 
 .accordeon__item-active .accordeon__wrap{
     width: 530px;
+}
 
-    // @include tablets {
-    //     width: 470px;
-    // }
+.accordeon__item-active {
+    @include phones {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 2;
+    }
+}
+
+.section__title--acco{
+    position: absolute;
+    top: rem(105px);
+    left: rem(41px);
 }

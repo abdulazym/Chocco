@@ -77,7 +77,7 @@
 
     @include tablets{
         display: block;
-        margin-bottom: 23px;
+        margin-bottom: rem(23px);
     }
 }
 
