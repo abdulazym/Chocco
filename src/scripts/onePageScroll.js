@@ -1,6 +1,8 @@
 (function(){
     const sections = $('section');
-const display = $('.maincontent');
+    const display = $('.maincontent');
+    const mobileDetect = new MobileDetect(window.navigator.userAgent);
+    const isMobile = mobileDetect.mobile();
 
 let inScroll = false;
 
@@ -41,50 +43,64 @@ const performTransition = (sectionEq) =>{
     }
 }
 
-const scrollViewport = (direction) =>{
+const scrollViewport = () =>{
     const activeSection = sections.filter('.active');
     const prevSection = activeSection.prev();
     const nextSection = activeSection.next();//console.log(nextSection)
     
-    if (direction === "next" && nextSection.length){
-        performTransition(nextSection.index());
-    }
-
-    if (direction === "prev" && prevSection.length){
-        performTransition(prevSection.index());
-    }
-}
+    return{
+        next(){
+            if (nextSection.length){
+                performTransition(nextSection.index());
+            }
+        },
+        prev(){
+            if (prevSection.length){
+                performTransition(prevSection.index());
+            }
+        },
+    };
+};
 
 $(window).on('wheel', (e)=>{
 
     const deltaY = e.originalEvent.deltaY;
+    const scroller =  scrollViewport();
 
     if (deltaY > 0) {
-        scrollViewport("next");
+        scroller.next();
+        // scrollViewport("next");
     }
 
     if (deltaY < 0){
-        scrollViewport("prev");
+        scroller.prev();
+        // scrollViewport("prev");
     }
 });
 
 $(window).on('keydown', (e)=>{
 
     const tagName = e.target.tagName.toLowerCase();
+    const scroller =  scrollViewport();
 
     if(tagName != "input" && tagName != "textarea"){
 
         switch (e.keyCode) {
             case 38:
-                scrollViewport("prev");
+                scroller.prev();
+                // scrollViewport("prev");
                 break;
     
             case 40: 
-                scrollViewport("next");
+                scroller.next();
+                break;
+                // scrollViewport("next");
         }
 
     }
 });
+
+$(".wrapper").on('touchmove', e => e.preventDefault());
 
 $('[data-scroll-to]').click(e =>{
     e.preventDefault;
@@ -96,5 +112,22 @@ $('[data-scroll-to]').click(e =>{
     performTransition(reqSection.index());
     
 });
+
+if (isMobile){
+    $("body").swipe( {
+        //Generic swipe handler for all directions
+        swipe:function(event, direction) {
+            const scroller = scrollViewport();
+            let scrollDirection = "";
+    
+            if(direction === "up") scrollDirection = "next";
+            if(direction === "down") scrollDirection = "prev";
+    
+            scroller[scrollDirection]();
+        },
+      });       
+}
+
+
 })();
 
