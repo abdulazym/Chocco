@@ -1,6 +1,8 @@
 (function(){
     const sections = $('section');
     const display = $('.maincontent');
+    const sideMenu = $('.fixed-menu');
+    const menuItems = sideMenu.find(".fixed-menu__item");
     const mobileDetect = new MobileDetect(window.navigator.userAgent);
     const isMobile = mobileDetect.mobile();
 
@@ -8,40 +10,51 @@ let inScroll = false;
 
 sections.first().addClass('active');
 
-const performTransition = (sectionEq) =>{
+const countSectionPosition = (sectionEq) =>{
+    return sectionEq * -100;
+};
 
-    if (inScroll === false){
-        inScroll = true;
-
-        const position = sectionEq * -100;
-
-        const currentSection = sections.eq(sectionEq);
-        const menuTheme = currentSection.attr('data-sidemenu-theme');
-        const sideMenu = $('.fixed-menu');
+const changeMenuThemeForSection = (sectionEq)=>{
+    const currentSection = sections.eq(sectionEq);
+    const menuTheme = currentSection.attr('data-sidemenu-theme');
+    const activeClass = "fixed-menu--shadowed";
 
         if(menuTheme==='black'){
-            sideMenu.addClass('fixed-menu--shadowed');
+            sideMenu.addClass(activeClass);
         }else{
-            sideMenu.removeClass('fixed-menu--shadowed');
+            sideMenu.removeClass(activeClass);
         }
+};
+
+const resetActiveClassForItem = (items, itemEq, activeClass)=>{
+    items.eq(itemEq).addClass(activeClass).siblings().removeClass(activeClass);
+};
+const performTransition = (sectionEq) =>{
+
+    if (inScroll) return;
+        inScroll = true;
+
+    const position = countSectionPosition(sectionEq);
+    changeMenuThemeForSection(sectionEq);
 
     display.css({
         transform: `translateY(${position}%)`,
-    })
+    });
 
-    sections.eq(sectionEq).addClass('active').siblings().removeClass('active');
+    resetActiveClassForItem(sections, sectionEq, "active");
     setTimeout(() => {
         inScroll = false;
 
-        sideMenu
-        .find('.fixed-menu__item')
-        .eq(sectionEq)
-        .addClass('fixed-menu__item--active')
-        .siblings()
-        .removeClass('fixed-menu__item--active');
-    }, 650);
-    }
-}
+        resetActiveClassForItem(menuItems, sectionEq, "fixed-menu__item--active");
+        // sideMenu
+        // .find('.fixed-menu__item')
+        // .eq(sectionEq)
+        // .addClass('fixed-menu__item--active')
+        // .siblings()
+        // .removeClass('fixed-menu__item--active');
+    }, 1300);
+    };
+
 
 const scrollViewport = () =>{
     const activeSection = sections.filter('.active');
@@ -124,6 +137,10 @@ if (isMobile){
             if(direction === "down") scrollDirection = "prev";
     
             scroller[scrollDirection]();
+
+            if(scroller[scrollDirection]){
+                scroller[scrollDirection]();
+            }
         },
       });       
 }

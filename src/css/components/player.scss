@@ -83,6 +83,10 @@
     position: absolute;
     right: rem(110px);
     cursor: pointer;
+
+    @include tablets{
+        right: rem(85px);
+    }
 }
 
 .player__controls{
